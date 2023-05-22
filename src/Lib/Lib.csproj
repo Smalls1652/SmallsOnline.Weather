@@ -7,12 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\SmallsOnline.Weather.props"/>
+        <ProjectReference Include="..\..\SmallsOnline.Weather.props" />
     </ItemGroup>
 
     <PropertyGroup>
         <AssemblyName>SmallsOnline.Weather.Lib</AssemblyName>
         <PackageId>SmallsOnline.Weather.Lib</PackageId>
+        <RootNamespace>SmallsOnline.Weather.Lib</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup>
