@@ -5,5 +5,5 @@ public interface IGeoJsonFeature<T>
     string Id { get; set; }
     string Type { get; set; }
     GeoJsonGeometry Geometry { get; set; }
-    IEnumerable<T>? Properties { get; set; }
+    T? Properties { get; set; }
 }

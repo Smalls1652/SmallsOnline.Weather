@@ -14,5 +14,5 @@ public class GeoJsonFeature<T> : IGeoJsonFeature<T>
     public GeoJsonGeometry Geometry { get; set; } = null!;
 
     [JsonPropertyName("properties")]
-    public IEnumerable<T>? Properties { get; set; }
+    public T? Properties { get; set; }
 }
