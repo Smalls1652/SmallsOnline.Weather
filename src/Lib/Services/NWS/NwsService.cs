@@ -1,4 +1,7 @@
-﻿namespace SmallsOnline.Weather.Lib.Services.NWS;
+﻿using System.Text.Json;
+using SmallsOnline.Weather.Lib.Models.NWS;
+
+namespace SmallsOnline.Weather.Lib.Services.NWS;
 
 public partial class NwsService : INwsService
 {
@@ -11,4 +14,11 @@ public partial class NwsService : INwsService
         _httpClient.DefaultRequestHeaders.UserAgent.Add(new("SmallsOnline.Weather.Lib", "0.0.1"));
     }
 
+    private ProblemDetail? ParseForProblemDetail(string jsonContent)
+    {
+        return JsonSerializer.Deserialize(
+            json: jsonContent,
+            jsonTypeInfo: _sourceGenerationContext.ProblemDetail
+        );
+    }
 }
