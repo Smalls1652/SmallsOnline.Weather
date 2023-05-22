@@ -13,6 +13,7 @@ namespace SmallsOnline.Weather.Lib;
 [JsonSerializable(typeof(AlertCollectionGeoJson))]
 [JsonSerializable(typeof(GeoJsonGeometry))]
 [JsonSerializable(typeof(GeoJsonFeature<Alert>))]
+[JsonSerializable(typeof(GeoJsonFeature<Point>))]
 [JsonSerializable(typeof(Office))]
 [JsonSerializable(typeof(OfficeAddress))]
 [JsonSerializable(typeof(OfficeHeadline))]
