@@ -5,19 +5,19 @@ namespace SmallsOnline.Weather.Lib.Models.NWS;
 public class Point : IPoint
 {
     [JsonPropertyName("@id")]
-    public string ApiId { get; set; } = null!;
+    public string? ApiId { get; set; } 
 
     [JsonPropertyName("@type")]
-    public string Type { get; set; } = null!;
+    public string? Type { get; set; } 
 
     [JsonPropertyName("cwa")]
-    public string Cwa { get; set; } = null!;
+    public string? ForecastOfficeId { get; set; }
 
     [JsonPropertyName("forecastOffice")]
-    public string ForecastOffice { get; set; } = null!;
+    public string? ForecastOffice { get; set; } 
 
     [JsonPropertyName("gridId")]
-    public string GridId { get; set; } = null!;
+    public string? GridId { get; set; } 
 
     [JsonPropertyName("gridX")]
     public int GridX { get; set; }
@@ -26,32 +26,29 @@ public class Point : IPoint
     public int GridY { get; set; }
 
     [JsonPropertyName("forecast")]
-    public string Forecast { get; set; } = null!;
+    public string? Forecast { get; set; } 
 
     [JsonPropertyName("forecastHourly")]
-    public string ForecastHourly { get; set; } = null!;
+    public string? ForecastHourly { get; set; } 
 
     [JsonPropertyName("forecastGridData")]
-    public string ForecastGridData { get; set; } = null!;
+    public string? ForecastGridData { get; set; } 
 
     [JsonPropertyName("observationStations")]
-    public string ObservationStations { get; set; } = null!;
+    public string? ObservationStations { get; set; } 
 
     [JsonPropertyName("forecastZone")]
-    public string ForecastZone { get; set; } = null!;
-
-    [JsonIgnore]
-    public string ForecastZoneId => ForecastZone.Split('/').Last();
+    public string? ForecastZone { get; set; }
 
     [JsonPropertyName("county")]
-    public string County { get; set; } = null!;
+    public string? County { get; set; } 
 
     [JsonPropertyName("fireWeatherZone")]
-    public string FireWeatherZone { get; set; } = null!;
+    public string? FireWeatherZone { get; set; } 
 
     [JsonPropertyName("timeZone")]
-    public string TimeZone { get; set; } = null!;
+    public string? TimeZone { get; set; } 
 
     [JsonPropertyName("radarStation")]
-    public string RadarStation { get; set; } = null!;
+    public string? RadarStation { get; set; } 
 }
