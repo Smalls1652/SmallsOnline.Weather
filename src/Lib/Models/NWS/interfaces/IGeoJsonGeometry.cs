@@ -3,5 +3,5 @@
 public interface IGeoJsonGeometry
 {
     string Type { get; set; }
-    IEnumerable<string>? Coordinates { get; set; }
+    IEnumerable<double>? Coordinates { get; set; }
 }

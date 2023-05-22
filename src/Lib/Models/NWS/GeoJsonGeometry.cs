@@ -8,5 +8,5 @@ public class GeoJsonGeometry : IGeoJsonGeometry
     public string Type { get; set; } = null!;
 
     [JsonPropertyName("coordinates")]
-    public IEnumerable<string>? Coordinates { get; set; }
+    public IEnumerable<double>? Coordinates { get; set; }
 }
