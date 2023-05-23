@@ -11,7 +11,4 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
-    <PropertyGroup>
-        <RootNamespace>SmallsOnline.Weather</RootNamespace>
-    </PropertyGroup>
 </Project>
