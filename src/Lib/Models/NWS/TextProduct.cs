@@ -27,4 +27,7 @@ public class TextProduct : ITextProduct
 
     [JsonPropertyName("productText")]
     public string? ProductText { get; set; }
+
+    [JsonIgnore]
+    public string? ProductTextHtml => ProductText?.Replace("\n", "<br />") ?? null;
 }
