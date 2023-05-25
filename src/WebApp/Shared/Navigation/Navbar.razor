@@ -4,7 +4,7 @@
     <div class="navbar navbar-dark bg-bluegray-light navbar-expand-lg rounded shadow-sm">
         <div class="container-fluid">
             <NavLink class="navbar-brand" href="/">
-                <img class="img-fluid" src="icon.webp" width="60">
+                <img class="img-fluid" src="icon.webp" width="72">
             </NavLink>
             <button aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-items" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,17 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <NavLink ActiveClass="active" class="nav-link" href="/" Match="NavLinkMatch.All">
-                                Home
+                                <i class="bi bi-house"></i> Home
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink ActiveClass="active" class="nav-link" href="/afd" Match="NavLinkMatch.Prefix">
+                                <i class="bi bi-file-text"></i> Area Forecast Discussion
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink ActiveClass="active" class="nav-link" href="/about" Match="NavLinkMatch.All">
+                                <i class="bi bi-info-circle-fill"></i> About
                             </NavLink>
                         </li>
                     </ul>
