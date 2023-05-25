@@ -1,0 +1,55 @@
+﻿@page "/afd/{OfficeId?}"
+
+<PageTitle>Area Forecast Discussion</PageTitle>
+
+<h1>Area Forecast Discussion</h1>
+
+<div class="row py-2">
+    <div class="col">
+        <button class="btn btn-primary" @onclick="HandleManualRefresh" type="button">
+            <i class="bi bi-arrow-clockwise" aria-label="Refresh"></i>
+        </button>
+    </div>
+</div>
+
+@if (_isLoading)
+{
+    <div class="row">
+        <div class="col">
+            <h2>
+                Loading...
+            </h2>
+            <div aria-label="Loading" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress" role="progressbar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col">
+            <h2>
+                Current
+            </h2>
+            @if (_textProductEntry is not null && _textProductEntry.ProductTextHtml is not null)
+            {
+                <div class="d-flex">
+                    <div class="card flex-shrink-1">
+                        <div class="card-body">
+                            <p class="font-monospace">
+                                @((MarkupString)_textProductEntry!.ProductTextHtml)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <p>
+                    No text product available.
+                </p>
+            }
+        </div>
+    </div>
+}
