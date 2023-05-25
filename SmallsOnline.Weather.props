@@ -11,4 +11,6 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
+    <Target Name="_CollectWatchItems" />
+
 </Project>
