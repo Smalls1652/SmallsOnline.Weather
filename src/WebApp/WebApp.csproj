@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunAOTCompilation>true</RunAOTCompilation>
   </PropertyGroup>
 
   <Import Project="..\..\SmallsOnline.Weather.props" />
