@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <Import Project="..\..\SmallsOnline.Weather.props" />
@@ -48,6 +49,10 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
     <None Remove="node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Lib.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
